@@ -1,0 +1,34 @@
+https://github.com/StephenGrider/EthereumCasts
+http://web.archive.org/web/20131228111141/http://vbuterin.com/ethereum.html
+http://rinkeby-faucet.com/send?address=0x96f4bE2DDA57937f106339eE5DcCbe7b3fE69CB9
+https://andersbrownworth.com/blockchain
+https://etherscan.io/chart/blocktime
+http://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.4.26+commit.4563c3fc.js
+https://www.google.com/search?q=gas+costs+from+yellow+paper&rlz=1C1CHBD_enUS911US911&oq=gas+costs+from+yellow+paper&aqs=chrome..69i57.3275j0j7&sourceid=chrome&ie=UTF-8
+https://iancoleman.io/bip39/
+https://faucet.rinkeby.io/
+https://app.diagrams.net/
+https://infura.io/dashboard/ethereum/646447f7853c43819c6895bcc09a8896/settings
+https://rinkeby.etherscan.io/address/0x662cf5fa080e47e7a07973ee49ca833b93be0beb
+
+http://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.4.26+commit.4563c3fc.js
+pragma solidity ^0.4.17;
+
+contract Lottery {
+    address public manager;
+    address[] public players;
+    
+    function Lottery() public {
+        // msg = global variable
+        manager = msg.sender;
+    }
+    
+    // Use 'payable' because ether will be sent to this function
+    function enter() public payable {
+        require(msg.value > .01 ether);
+        
+        players.push(msg.sender);
+    }
+}
+
+https://qttechacademy.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/learn/lecture/9020524#notes
